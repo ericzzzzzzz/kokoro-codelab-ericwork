@@ -23,7 +23,8 @@ docker buildx ls
 sudo cat /etc/docker/daemon.json
 sudo service docker stop
 sudo service docker start --experimental
-sudo cat ~/.docker/config.json
+sudo apt-get install -y qemu qemu-user-static
+docker buildx ls
 
 if [ "$1" == "release" ]; then
   javac -g:none Hello.java
