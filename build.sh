@@ -19,6 +19,8 @@ docker --version
 
 docker run --privileged --rm tonistiigi/binfmt --install all
 
+docker buildx ls
+
 if [ "$1" == "release" ]; then
   javac -g:none Hello.java
 else
