@@ -26,6 +26,9 @@ sudo service docker start --experimental
 sudo apt-get install -y qemu qemu-user-static
 docker buildx ls
 
+docker buildx create --use --name mybuilder
+docker buildx ls
+
 if [ "$1" == "release" ]; then
   javac -g:none Hello.java
 else
