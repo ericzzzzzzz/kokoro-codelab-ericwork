@@ -20,6 +20,10 @@ docker --version
 docker run --privileged --rm tonistiigi/binfmt --install all
 
 docker buildx ls
+cat /etc/docker/daemon.json
+sudo service docker stop
+sudo service docker start --experimental
+cat ~/.docker/config.json
 
 if [ "$1" == "release" ]; then
   javac -g:none Hello.java
