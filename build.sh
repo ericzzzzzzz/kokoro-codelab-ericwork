@@ -14,7 +14,7 @@ set -e
 
 docker version
 
-sudo apt-get install docker-ce -y
+sudo apt-get install docker-ce docker-ce-cli -y
 
 docker version
 
