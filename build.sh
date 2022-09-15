@@ -11,23 +11,11 @@ set -e
 #  Additionally, recursive invocation with credentials as command-line
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
-docker --version
 
-sudo apt-get update && sudo apt-get install -yq gnupg2
-
-docker --version
-
-docker run --privileged --rm tonistiigi/binfmt --install all
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 
 docker buildx ls
-sudo cat /etc/docker/daemon.json
-sudo service docker stop
-sudo service docker start --experimental
-sudo apt-get install -y qemu qemu-user-static
-docker buildx ls
 
-docker buildx create --use --name mybuilder
-docker buildx ls
 
 if [ "$1" == "release" ]; then
   javac -g:none Hello.java
