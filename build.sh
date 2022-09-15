@@ -21,7 +21,7 @@ docker version
 
 
 docker buildx ls
-docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+docker run --rm --privileged multiarch/qemu-user-static:register --reset -p yes
 docker buildx ls
 
 uname -r
