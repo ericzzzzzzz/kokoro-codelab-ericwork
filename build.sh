@@ -12,12 +12,19 @@ set -e
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
 
+docker version
+
+ls /proc/sys/fs/binfmt_misc
+
 docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 
 docker buildx ls
 
 uname -r
 
+sudo apt-get install -y binfmt-support
+
+update_binfmts --version
 
 if [ "$1" == "release" ]; then
   javac -g:none Hello.java
