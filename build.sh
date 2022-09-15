@@ -16,6 +16,8 @@ docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
 
 docker buildx ls
 
+uname -r
+
 
 if [ "$1" == "release" ]; then
   javac -g:none Hello.java
