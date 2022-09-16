@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 
 # Fail on any error.
 set -e
@@ -14,11 +14,10 @@ set -e
 
 docker version
 docker run --privileged --rm tonistiigi/binfmt --install all
-sudo apt-get install docker-ce=20.10.7 -y
+sudo apt-get install docker-ce -y
 docker run --privileged --rm tonistiigi/binfmt --install all
 
 docker version
-
 
 docker buildx ls
 docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
@@ -26,8 +25,6 @@ docker run --privileged --rm tonistiigi/binfmt --install all
 docker buildx ls
 
 uname -r
-
-
 
 if [ "$1" == "release" ]; then
   javac -g:none Hello.java
