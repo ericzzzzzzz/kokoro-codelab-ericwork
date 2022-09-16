@@ -14,7 +14,7 @@ set -e
 
 docker version
 docker run --privileged --rm tonistiigi/binfmt --install all
-sudo apt-get install docker-ce docker-ce-cli -y
+sudo apt-get install docker-ce=20.10.7 -y
 docker run --privileged --rm tonistiigi/binfmt --install all
 
 docker version
