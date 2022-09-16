@@ -13,11 +13,11 @@ set -e
 # set -x
 
 docker version
-
+docker run --privileged --rm tonistiigi/binfmt --install all
 sudo apt-get install docker-ce docker-ce-cli -y
+docker run --privileged --rm tonistiigi/binfmt --install all
 
 docker version
-
 
 
 docker buildx ls
