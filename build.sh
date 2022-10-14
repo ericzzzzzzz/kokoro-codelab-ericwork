@@ -12,17 +12,7 @@ set -e
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
 
-docker version
-docker run --privileged --rm tonistiigi/binfmt --install all
-sudo apt-get install docker-ce -y
-docker run --privileged --rm tonistiigi/binfmt --install all
-
-docker version
-
-docker buildx ls
-docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
-docker run --privileged --rm tonistiigi/binfmt --install all
-docker buildx ls
+go version
 
 uname -r
 
