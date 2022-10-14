@@ -13,6 +13,7 @@ set -e
 # set -x
 
 go version
+go env
 
 uname -r
 
