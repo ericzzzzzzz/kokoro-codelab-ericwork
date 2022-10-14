@@ -12,7 +12,17 @@ set -e
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
 
+GO_DIR="$HOME"/go
+
 rm -Rf /usr/local/go
+curl --fail --show-error --silent --location "https://go.dev/dl/go1.19.2.darwin-amd64.tar.gz" -o "go1.19.2.darwin-amd64.tar.gz"
+tar xz --directory="$GO_DIR" --strip-components=1
+export PATH="$GO_DIR":"$PATH"
+
+go version
+go env
+
+rm -Rf /usr/local/Cellar/go
 go version
 go env
 
