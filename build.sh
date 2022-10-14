@@ -12,6 +12,7 @@ set -e
 #  parameters, will print the full command, with credentials, in the build logs.
 # set -x
 
+rm -Rf /usr/local/go
 go version
 go env
 
