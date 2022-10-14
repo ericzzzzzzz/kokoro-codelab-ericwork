@@ -14,7 +14,7 @@ set -e
 
 GO_DIR="$HOME"/go
 
-rm -Rf /usr/local/go
+rm -Rf /usr/local/go && mkdir "$GO_DIR"
 curl --fail --show-error --silent --location "https://go.dev/dl/go1.19.2.darwin-amd64.tar.gz" -o "go1.19.2.darwin-amd64.tar.gz"
 tar xz --directory="$GO_DIR" --strip-components=1
 export PATH="$GO_DIR":"$PATH"
