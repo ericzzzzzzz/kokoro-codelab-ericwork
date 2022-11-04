@@ -13,6 +13,8 @@ set -e
 # set -x
 
 GO_DIR="$HOME"/go
+echo "aa" >> a.txt
+cp a.txt "${KOKORO_ARTIFACTS_DIR}"/build
 
 ls $KOKORO_GFILE_DIR
 
@@ -24,3 +26,4 @@ else
   javac Hello.java
 fi
 java Hello
+
