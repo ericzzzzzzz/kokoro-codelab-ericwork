@@ -18,6 +18,7 @@ set -e
 cd "${KOKORO_ARTIFACTS_DIR}/github/kokoro-codelab-ericwork"
 
 echo "from continuous" > a.txt
-
-cp --parents a.txt "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
+ls ${KOKORO_ARTIFACTS_DIR}
+mkdir "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
+cp a.txt "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
 
