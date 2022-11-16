@@ -19,5 +19,5 @@ cd "${KOKORO_ARTIFACTS_DIR}/github/kokoro-codelab-ericwork"
 ls "$KOKORO_GFILE_DIR"/build/
 echo "from b" > a.txt
 
-cp -R a.txt "${KOKORO_ARTIFACTS_DIR}"/build
+cp --path a.txt "${KOKORO_ARTIFACTS_DIR}"/build
 
