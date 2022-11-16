@@ -19,5 +19,5 @@ cd "${KOKORO_ARTIFACTS_DIR}/github/kokoro-codelab-ericwork"
 
 echo "from continuous" > a.txt
 
-cp --path a.txt "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
+cp --parents a.txt "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
 
