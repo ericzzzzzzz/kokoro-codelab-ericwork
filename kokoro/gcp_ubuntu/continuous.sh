@@ -18,6 +18,9 @@ set -e
 cd "${KOKORO_ARTIFACTS_DIR}/github/kokoro-codelab-ericwork"
 
 echo "from continuous" > a.txt
+echo "from continuous" > c.txt
+mkdir out
+mv *.txt out
 mkdir -p "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
-cp a.txt "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
+cp out/. "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
 

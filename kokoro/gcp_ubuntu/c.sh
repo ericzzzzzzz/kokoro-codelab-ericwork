@@ -16,6 +16,8 @@ set -e
 # The final directory name in this path is determined by the scm name specified
 # in the job configuration.
 cd "${KOKORO_ARTIFACTS_DIR}/github/kokoro-codelab-ericwork"
+
 echo "listing build files from all ancester jobs"
+
 ls "$KOKORO_GFILE_DIR"/build/
 
