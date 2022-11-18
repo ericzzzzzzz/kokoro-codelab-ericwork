@@ -19,5 +19,6 @@ cd "${KOKORO_ARTIFACTS_DIR}/github/kokoro-codelab-ericwork"
 
 echo "listing build files from all ancester jobs"
 
+ls "$KOKORO_GFILE_DIR"/
 ls "$KOKORO_GFILE_DIR"/build/
 
