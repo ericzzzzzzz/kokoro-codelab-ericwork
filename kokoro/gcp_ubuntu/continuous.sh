@@ -22,5 +22,5 @@ echo "from continuous" > c.txt
 mkdir out
 mv *.txt out
 mkdir -p "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
-cp out/. "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
+cp -R out/. "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
 
