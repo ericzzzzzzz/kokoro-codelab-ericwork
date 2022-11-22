@@ -24,3 +24,6 @@ mv *.txt out
 mkdir -p "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
 cp -R out/. "${KOKORO_ARTIFACTS_DIR}"/build/unsigned
 
+git clone https://github.com/GoogleContainerTools/skaffold.git
+cd skaffold
+make coverage
