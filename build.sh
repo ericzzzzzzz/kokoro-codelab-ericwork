@@ -17,7 +17,8 @@ GO_DIR="$HOME"/go
 #cp a.txt "${KOKORO_ARTIFACTS_DIR}"/build
 
 ls $KOKORO_GFILE_DIR
-
+go version
+apt-get install google-golang
 uname -r
 
 if [ "$1" == "release" ]; then
